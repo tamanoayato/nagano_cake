@@ -1,0 +1,14 @@
+<div class="container">
+ <div class="row">
+  <div class="col-md-4">
+   <h1>商品詳細</h1>
+    <div></div>
+    <div>商品名 <%= @item.name %></div>
+    <div>商品説明 <%= @item.introduction %></div>
+    <div>ジャンル <%=  @item.genre_id %></div>
+    <div>税込価格（税抜価格） (<%= @item.price %>)</div>
+    <div>販売ステータス <%= @item.is_active%></div>
+    <div><%= link_to '編集する', edit_admin_item_path(@item.id) %></div>
+  </div>
+ </div>
+</div>
