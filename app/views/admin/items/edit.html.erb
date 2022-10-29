@@ -1,7 +1,7 @@
 <div class="container">
  <div class="row">
   <div class="col-md-4">
-   <h1>商品新規登録</h1>
+   <h1>商品編集</h1>
    <%= form_with model: @item, url: admin_items_path, method: :patch do |f| %>
    <div>
     <label>商品画像</label>
@@ -28,7 +28,7 @@
     <%= f.radio_button :is_active, true %>販売中
     <%= f.radio_button :is_active, false %>販売停止中
    </div>
-    <%= f.submit '新規登録' %>
+    <%= f.submit '更新' %>
    <% end %>
   </div>
  </div>

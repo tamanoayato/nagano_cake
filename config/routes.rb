@@ -16,11 +16,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get 'orders/show'
+    resources :orders, only:[:show, :update]
   end
   namespace :admin do
-    get 'customers/index'
-    get 'customers/show'
-    get 'customers/edit'
+    resources :customers, only:[:index, :show, :edit, :update]
   end
 
   namespace :admin do
