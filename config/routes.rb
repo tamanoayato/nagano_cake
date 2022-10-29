@@ -5,10 +5,9 @@ Rails.application.routes.draw do
   get  resources :customers, only:[:show, :edit, :update, :quit, :withdrawl]
   get  resources :items, only:[:index, :show]
   root to: "homes#top"
-  get 'home/about' => 'homes#about', as: 'about'
+  get '/about' => 'homes#about', as: 'about'
 
   namespace :admin do
-    get 'orders/show'
     resources :orders, only:[:show, :update]
   end
   namespace :admin do
