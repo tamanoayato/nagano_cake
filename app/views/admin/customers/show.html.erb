@@ -9,7 +9,14 @@
     <div>住所 <%= @customer.address %></div>
     <div>電話番号 <%= @customer.telephone_number %></div>
     <div>メールアドレス <%= @customer.email %></div>
-    <div>会員ステータス <%= @item.is_active%></div>
+    <div>会員ステータス</div>
+    <div>
+      <% if @customer.is_active == true %>
+       <p>有効</p>
+      <% else %>
+       <p>退会</p>
+      <% end %>
+    </div>
     <div><%= link_to '編集する', edit_admin_item_path(@item.id) %>　　<%= link_to '注文履歴一覧を見る',%></div>
   </div>
  </div>
